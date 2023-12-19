@@ -8,6 +8,7 @@ import { AppConfig } from '@/utils/AppConfig';
 import { getCardContent } from '@/utils/Notion';
 
 const response: any = await getAllPost();
+console.log(response);
 const lastThreePosts = getCardContent(response.results.slice(0, 3));
 
 const { title } = AppConfig;
