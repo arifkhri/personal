@@ -1,0 +1,18 @@
+---
+import Base from '@/templates/Base.astro';
+import { AppConfig } from '@/utils/AppConfig';
+import { getContent } from '@/utils/Notion';
+import { Section, PaginationHeader } from 'astro-boilerplate-components';
+import { NotionRenderer } from 'react-notion-x';
+
+const { id } = Astro.params;
+const {blocks, metaData} = await getContent(id);
+const title = `${metaData.title} - ${AppConfig.site_name}`;
+const description = metaData.title;
+---
+<Base head={{ title, description }}>
+  <Section>
+  <NotionRenderer recordMap={blocks} fullPage={true} darkMode />
+  </Section>
+</Base>
+

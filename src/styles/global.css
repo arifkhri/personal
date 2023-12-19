@@ -1,0 +1,22 @@
+/* overide tailwind background class */
+.bg-slate-900 {
+  background: rgb(24 24 27) !important;
+}
+
+.bg-slate-800 {
+  background: rgb(39 39 42) !important;
+}
+
+/* overide notion-react-x styles */
+.notion-header {
+  display: none;
+}
+
+.notion-frame {
+  padding-top: 0;
+}
+
+.notion-app {
+  border-radius: 10px;
+  background: #262626;
+}
